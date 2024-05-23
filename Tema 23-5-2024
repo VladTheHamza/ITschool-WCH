@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x, p = 1;
+    cout << "Dati o valoare variabilei x ---> ";
+    cin >> x;
+    while (x > 1)
+    {
+        p = p * x;
+        --x;
+    }
+    cout << "Valoarea lui p este --> " << p;
+
+}
