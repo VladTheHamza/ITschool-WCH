@@ -1,0 +1,95 @@
+/////Problema 1
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, s=0, p=1;
+    cin >> a;
+    while (a != 0)
+    {
+        s = s + a % 10;
+        p = p * a % 10;
+        a = a / 10;
+    }
+    cout << "Suma= " << s << endl << "Produs= " << p;
+}
+
+
+/////Problema 2
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,k;
+    cin >> a;
+    k = a;
+    do {
+        cout << k<<" ";
+        k--;
+    } while (k != 0);
+}
+
+
+/////Problema 3
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,r=1;
+    cout << "Baza= ";
+    cin >> a;
+    cout << "Exponentul= ";
+    cin >> b;
+    if (b > 0)
+    {
+        while (b != 0)
+        {
+            r = r * a;
+            b--;
+        }
+        cout << "Rezultatul ---> " << r;
+    }
+    else
+    {
+        if (b < 0)
+        {
+            while (b != 0)
+            {
+                r = r * a;
+                b++;
+            }
+            cout << "Rezultatul ---> 1/" << r;
+        }
+        else
+            cout << "Rezultatul ---> 1";
+    }
+}
+
+
+/////Problema 4
+
+
+
+/////Problema 5
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,k=2,c;
+    cin >> a;
+    while (a!=1 && k!=a)
+    {   
+        c = 0;
+        while (a % k == 0)
+        {
+            a = a / k;
+            c++;
+        }
+        if (c != 0)
+            cout << k << "^" << c << "+";
+        k++;
+    }
+    cout << "0";
+}
+
+
