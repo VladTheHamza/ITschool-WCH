@@ -1,0 +1,25 @@
+#include <iostream>
+#include<windows.h>
+using namespace std;
+int main()
+{
+    int v[100] = { 7,34,-28,0,750,7,-24,45,7,7};
+    int n=10,maxi=v[0],i,x,k=0,c=0;
+    cout << "Ce element doriti sa verificati daca apare in grupa";
+    cin >> x;
+    for (i = 0; i < n; i++)
+    {
+        if (x == v[i])
+        {
+            k = 1;
+            c++;
+        }
+        if (maxi < v[i])
+            maxi = v[i];
+    }
+    if (k == 1)
+    {
+        cout << "Numarul " << x << " este in grupa V si apare de " << c<<endl;
+    }
+    Sleep(1000);
+    cout << "Numarul max este = " << maxi << endl;
